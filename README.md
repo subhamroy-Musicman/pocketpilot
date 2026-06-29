@@ -96,6 +96,3 @@ The app will now be running at **[http://localhost:5173](http://localhost:5173)*
 
 ## 🤝 Contributing
 Contributions are always welcome! Feel free to open a Pull Request to squash bugs, add new AI prompts, or polish the CSS further.
-
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
