@@ -25,7 +25,8 @@ const resources = {
       "noExpenses": "No recent expenses found.",
       "welcome": "Welcome back",
       "askAi": "Ask AI...",
-      "aiInsights": "AI Assistant"
+      "aiInsights": "AI Assistant",
+      "categoryBreakdown": "Category Breakdown"
     }
   },
   es: {
