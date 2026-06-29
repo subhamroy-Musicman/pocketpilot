@@ -40,7 +40,7 @@ const AppContent = () => {
             Made with <span style={{ color: '#ef4444' }}>❤</span> by Subham Roy
           </p>
           <p style={{ margin: 0, fontSize: '0.9rem' }}>
-            For any suggestion or doubt email - <a href="mailto:subhamroy5709@gmail.com" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: '600' }}>subhamroy5709@gmail.com</a>
+            For any suggestion or doubt email - <a href="https://mail.google.com/mail/?view=cm&fs=1&to=subhamroy5709@gmail.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: '600' }}>subhamroy5709@gmail.com</a>
           </p>
         </footer>
       </div>
