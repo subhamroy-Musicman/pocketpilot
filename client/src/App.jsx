@@ -36,7 +36,9 @@ const AppContent = () => {
         
         {/* Footbar */}
         <footer style={{ padding: '24px', textAlign: 'center', color: 'var(--text-secondary)', borderTop: '1px solid var(--glass-border)', background: 'var(--glass-bg)', backdropFilter: 'var(--blur)' }}>
-          <p style={{ margin: '0 0 8px 0', fontWeight: '500' }}>Made with ❤ by Subham Roy</p>
+          <p style={{ margin: '0 0 8px 0', fontWeight: '500' }}>
+            Made with <span style={{ color: '#ef4444' }}>❤</span> by Subham Roy
+          </p>
           <p style={{ margin: 0, fontSize: '0.9rem' }}>
             For any suggestion or doubt email - <a href="mailto:subhamroy5709@gmail.com" style={{ color: 'var(--accent)', textDecoration: 'none', fontWeight: '600' }}>subhamroy5709@gmail.com</a>
           </p>
