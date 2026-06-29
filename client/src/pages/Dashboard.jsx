@@ -79,7 +79,7 @@ const Dashboard = () => {
       setAiInsights(res.data.insights);
     } catch (err) {
       console.error(err);
-      toast.error("Failed to generate AI insights");
+      toast.error(err.response?.data?.message || "Failed to generate AI insights");
     } finally {
       setIsInsightsLoading(false);
     }
@@ -299,16 +299,24 @@ const Dashboard = () => {
         {/* Category Chart */}
         <div className="glass" style={{ padding: '24px' }}>
           <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', marginBottom: '16px' }}>{t('categoryBreakdown')}</h3>
-          <div style={{ height: '300px' }}>
-            <ResponsiveContainer width="100%" height="100%">
+          <div style={{ height: '300px', display: 'flex', gap: '20px' }}>
+            <ResponsiveContainer width="50%" height="100%">
               <PieChart>
-                <Pie data={pieData} dataKey="total" nameKey="category" cx="50%" cy="50%" outerRadius={100} label>
+                <Pie data={pieData} dataKey="total" nameKey="category" cx="50%" cy="50%" outerRadius={80} label>
                   {pieData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
                 <Tooltip contentStyle={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '8px' }} />
               </PieChart>
+            </ResponsiveContainer>
+            <ResponsiveContainer width="50%" height="100%">
+              <BarChart data={pieData}>
+                <XAxis dataKey="category" stroke="var(--text-secondary)" tick={{fontSize: 10}} />
+                <YAxis stroke="var(--text-secondary)" />
+                <Tooltip contentStyle={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '8px' }} />
+                <Bar dataKey="total" fill="var(--accent)" />
+              </BarChart>
             </ResponsiveContainer>
           </div>
         </div>
